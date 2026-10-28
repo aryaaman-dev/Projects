@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: cursive;
+}
+
+html,body{
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(135deg,purple,violet,pink);
+}
+
+ :root{
+         --bg-primary-color:#f0f0f0;
+         --bg-icon-color:#8052ec;
+
+         --space-ms:4px;
+         --space-sm:8px;
+         --space-sm2:10px;
+         --space-md:16px;
+         --space-lg:20px;
+         --space-xl:30px;
+         --space-2xl:40px;
+}
+.container{
+    width:40%;
+    min-width:450px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    padding:var(--space-2xl) var(--space-lg)
+}
+
+#newtask{
+    background-color: transparent;
+    border: 2px solid #33333357;
+    padding: var(--space-md) var(--space-xl);
+    border-radius: var(--space-sm);
+    display:flex;
+    box-shadow: 0px 15px 30px rgba(0,0,0,0.3);
+    justify-content: space-between;
+}
+input{
+    padding:var(--space-sm2);
+    width:85%;
+    height:45px;
+    font-size:1rem;
+    border: 1px solid #520af8;
+    color:#111111;
+    font-weight: 500;
+    border-radius: var(--space-sm2);
+    background-color: #dadada;
+}
+input:focus{
+    outline: none;
+    border:2px solid rgb(253, 5, 253);
+}
+
+button{
+    background-color: var(--bg-icon-color);
+    border:none;
+    padding:var(--space-sm);
+    border-radius: var(--space-ms);
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover{
+    transform:scale(1.1);
+}
+
+#tasks{
+   padding:var(--space-xl) var(--space-lg);
+    background-color: transparent;
+    border: 2px solid #33333357;
+    margin-top: 60px;
+    border-radius: 10px;
+    box-shadow: 0px 15px 30px rgba(0,0,0,0.3);
+    width:100%;
+}
+
+.task{
+    background-color: transparent;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 15px 30px rgba(0,0,0,0.3);
+    width: 100%;
+    border-radius: var(--space-sm);
+    padding: var(--space-ms);
+    margin-bottom: 10px;
+}
+
+.task span{
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.task button{
+    font-size: 20px;
+}
+
+.completed{
+    text-decoration :line-through;
+}

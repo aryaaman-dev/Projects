@@ -1,0 +1,131 @@
+*{
+    box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+
+.main_box{
+    min-height: 100vh;
+    background-image: url(photo.jpg);
+    background-size: cover;
+}
+
+.btn_one i{
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    position: absolute;
+    left: 16px;  /*content ka height badhane ke liye line height ki property ka istemaal karte h*/
+    line-height: 60px;
+    cursor: pointer;
+    transition: all 0.3s linear ;
+}
+
+.btn_one i:hover{
+    font-size: 23px;
+}
+
+.sidebar_menu{
+    position: fixed;
+    left: -350px;   /*important for slide in slide out animation*/
+    width: 255px;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.4);
+    min-height: 100vh;
+    transition: all 0.3s linear ;
+}
+
+.sidebar_menu .logo{
+    position: absolute;
+    width: 100%;
+    line-height: 60px;
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.4);
+    height: 60px;
+}
+
+.sidebar_menu .logo a{
+    position: absolute;
+    left: 30%;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.btn_two i{
+    color: grey;
+    font-size: 20px;
+    line-height: 16px;
+    position: absolute;
+    left: 230px;
+    top: 20px;
+    cursor: pointer;
+    transition: all 0.3s linear ;
+}
+
+.btn_two i:hover{
+    font-size: 25px;
+}
+
+.sidebar_menu .menu{
+    position: absolute;
+    top: 70px;
+    width: 100%
+}
+
+.menu li {
+    margin: 6px;
+    padding: 14px 20px;
+}
+
+.menu li:hover{
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.4);
+}
+
+.menu i,a{
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.menu i{
+    padding-right: 8px;
+}
+
+
+.social_media{
+    position: absolute;
+    left: 25%;
+    bottom: 0;
+    margin-bottom: 80px;
+}
+
+.social_media i{
+    color: white;
+    opacity: 0.5;
+    padding: 0 5px;
+    font-size: 20px;
+}
+
+.social_media i:hover{
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+#check{
+    display: none;
+}
+
+#check:checked ~.sidebar_menu{
+    left:0;
+}
+
+#check:checked ~ .btn_one{
+    opacity: 0;
+}
+
+#check:checked ~ .sidebar_menu .btn_two{
+    opacity: 1;
+}
